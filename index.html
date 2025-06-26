@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>alittlebitofarif</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #222;
+    }
+    .container {
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    img.headshot {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .bio, .section-content {
+      margin: 1.5rem 0;
+      line-height: 1.5;
+    }
+    .section-button {
+      display: block;
+      width: 100%;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #eee;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .popup {
+      display: none;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    .popup.active {
+      display: block;
+    }
+    a {
+      color: #0066cc;
+    }
+    .split-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .split-links a {
+      flex: 1;
+      padding: 0.5rem;
+      text-align: center;
+      background: #ddd;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="headshot" src="headshot.jpg" alt="Arif Headshot" />
+    <h1>alittlebitofarif</h1>
+    <div class="bio">
+      <p><strong>Mentor, consultant, musician, and multi-hyphenate generalist.</strong> I help people move forward — creatively, strategically, and collaboratively — by showing up with energy, clarity, and a bias for progress. My background spans sectors — from event production and infrastructure to consulting, property, construction, education, and entertainment. <a href="#" onclick="togglePopup('fullBio')">Read Full Bio</a></p>
+      <div id="fullBio" class="popup">
+        <p>Full bio content goes here...</p>
+      </div>
+    </div>
+
+    <button class="section-button" onclick="window.open('https://www.linkedin.com/in/yourprofile', '_blank')">LinkedIn</button>
+
+    <button class="section-button" onclick="togglePopup('creative')">Creative Stuff</button>
+    <div id="creative" class="popup">
+      <div class="split-links">
+        <a href="https://crossfader.fm" target="_blank">Crossfader</a>
+        <a href="https://substack.com" target="_blank">Substack</a>
+      </div>
+    </div>
+
+    <button class="section-button" onclick="togglePopup('implementoring')">Implementoring</button>
+    <div id="implementoring" class="popup">
+      <div class="section-content">
+        <p><strong>Implementoring is my response to the kind of mentoring I wish I’d had:</strong> less theory, more doing and with an understanding that you can’t mentor someone if you’ve forgotten what it’s like to be in their shoes...</p>
+        <p>My approach blends insight with implementation. We’ll work together to identify what matters, cut through the noise, and make momentum inevitable because I will actually do stuff, becoming the business partner you wish you had...</p>
+      </div>
+    </div>
+
+    <button class="section-button" onclick="togglePopup('bizdev')">Business Development</button>
+    <div id="bizdev" class="popup">
+      <div class="section-content">
+        <p><strong>I partner with businesses to drive revenue, shape strategy, and open markets.</strong></p>
+        <p>I do this by getting to the heart of what you offer, finding where it fits, and turning that into relationships that convert...</p>
+        <p>Recent example: international sales and business development for <strong>Dolphin Creative</strong> — a performance agency working with tourism boards and governments worldwide...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function togglePopup(id) {
+      const popup = document.getElementById(id);
+      popup.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
