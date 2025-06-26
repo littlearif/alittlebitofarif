@@ -2,70 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>alittlebitofarif</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alittlebitofarif</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fdfdfd;
+      background: #ffffff;
       color: #222;
+      line-height: 1.6;
     }
-    .container {
-      padding: 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    img.headshot {
-      width: 100%;
-      max-width: 200px;
-      border-radius: 50%;
-      display: block;
-      margin: 1rem auto;
-    }
-    h1, h2 {
+
+    .hero {
       text-align: center;
+      padding: 2em 1em;
+      background: #f0f2f5;
     }
-    .bio, .section-content {
-      margin: 1.5rem 0;
-      line-height: 1.5;
+
+    .headshot {
+      width: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1em;
+      border: 3px solid #ccc;
     }
-    .section-button {
-      display: block;
-      width: 100%;
-      margin: 1rem 0;
-      padding: 1rem;
-      background: #eee;
-      border: none;
-      font-size: 1.2rem;
+
+    .headline {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+
+    .subhead {
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+      color: #555;
+    }
+
+    .read-more a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
       cursor: pointer;
     }
-    .popup {
-      display: none;
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 1rem;
-      margin-top: 1rem;
+
+    .sections {
+      padding: 2em 1em;
+      max-width: 700px;
+      margin: auto;
     }
-    .popup.active {
-      display: block;
+
+    section {
+      margin-bottom: 2em;
+      border-top: 1px solid #ddd;
+      padding-top: 1.5em;
     }
-    a {
-      color: #0066cc;
+
+    h2 {
+      color: #007acc;
+      font-size: 1.3em;
+      margin-bottom: 0.5em;
     }
-    .split-links {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .split-links a {
-      flex: 1;
-      padding: 0.5rem;
-      text-align: center;
-      background: #ddd;
-      border-radius: 5px;
+
+    .button {
+      display: inline-block;
+      margin: 0.5em 0.5em 0 0;
+      padding: 0.75em 1.2em;
+      background: #007acc;
+      color: white;
       text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.95em;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #888;
+      padding: 2em 0 1em;
+      border-top: 1px solid #eee;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .full-bio {
+      margin-top: 1em;
+      font-size: 1em;
+      color: #444;
     }
   </style>
 </head>
@@ -75,10 +106,10 @@
     <h1>alittlebitofarif</h1>
     <div class="bio">
       <p><strong>Mentor, consultant, musician, and multi-hyphenate generalist.</strong> I help people move forward — creatively, strategically, and collaboratively — by showing up with energy, clarity, and a bias for progress. My background spans sectors — from event production and infrastructure to consulting, property, construction, education, and entertainment. <a href="#" onclick="togglePopup('fullBio')">Read Full Bio</a></p>
-      <div id="Full Bio" class="popup">
-        <p>Keni Smells</p>
+      <div id="fullBio" class="popup">
+        <p>Full bio content goes here...</p>
       </div>
-    </div> 
+    </div>
 
     <button class="section-button" onclick="window.open('https://www.linkedin.com/in/yourprofile', '_blank')">LinkedIn</button>
 
@@ -88,31 +119,36 @@
         <a href="https://crossfader.fm" target="_blank">Crossfader</a>
         <a href="https://substack.com" target="_blank">Substack</a>
       </div>
-    </div>
+    </section>
 
-    <button class="section-button" onclick="togglePopup('implementoring')">Implementoring</button>
-    <div id="implementoring" class="popup">
-      <div class="section-content">
-        <p><strong>Implementoring is my response to the kind of mentoring I wish I’d had:</strong> less theory, more doing and with an understanding that you can’t mentor someone if you’ve forgotten what it’s like to be in their shoes...</p>
-        <p>My approach blends insight with implementation. We’ll work together to identify what matters, cut through the noise, and make momentum inevitable because I will actually do stuff, becoming the business partner you wish you had...</p>
-      </div>
-    </div>
+    <section>
+      <h2>Implementoring</h2>
+      <p>Implementoring is my response to the kind of mentoring I wish I’d had: less theory, more doing and with an understanding that you can’t mentor someone if you’ve forgotten what it’s like to be in their shoes.</p>
+      <p>My approach blends insight with implementation. We’ll work together to identify what matters, cut through the noise, and make momentum inevitable because I will actually do stuff, becoming the business partner you wish you had.</p>
+    </section>
 
-    <button class="section-button" onclick="togglePopup('bizdev')">Business Development</button>
-    <div id="bizdev" class="popup">
-      <div class="section-content">
-        <p><strong>I partner with businesses to drive revenue, shape strategy, and open markets.</strong></p>
-        <p>I do this by getting to the heart of what you offer, finding where it fits, and turning that into relationships that convert...</p>
-        <p>Recent example: international sales and business development for <strong>Dolphin Creative</strong> — a performance agency working with tourism boards and governments worldwide...</p>
-      </div>
-    </div>
-  </div>
+    <section>
+      <h2>Business Development</h2>
+      <p>I partner with businesses to drive revenue, shape strategy, and open markets.</p>
+      <p>Recent example: international sales and business development for <strong>Dolphin Creative</strong>, a performance agency working with tourism boards and governments worldwide.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alittlebitofarif</p>
+  </footer>
 
   <script>
-    function togglePopup(id) {
-      const popup = document.getElementById(id);
-      popup.classList.toggle('active');
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleLink = document.getElementById('toggleBio');
+      const fullBio = document.getElementById('fullBio');
+
+      toggleLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        fullBio.classList.toggle('hidden');
+        toggleLink.textContent = fullBio.classList.contains('hidden') ? 'Read Full Bio' : 'Hide Full Bio';
+      });
+    });
   </script>
 </body>
 </html>
