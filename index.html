@@ -101,23 +101,32 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="headshot" src="headshot.jpg" alt="Arif Headshot" />
-    <h1>alittlebitofarif</h1>
-    <div class="bio">
-      <p><strong>Mentor, consultant, musician, and multi-hyphenate generalist.</strong> I help people move forward — creatively, strategically, and collaboratively — by showing up with energy, clarity, and a bias for progress. My background spans sectors — from event production and infrastructure to consulting, property, construction, education, and entertainment. <a href="#" onclick="togglePopup('fullBio')">Read Full Bio</a></p>
-      <div id="fullBio" class="popup">
-        <p>Full bio content goes here...</p>
-      </div>
+  <header class="hero">
+    <img src="Hartwyn-11.JPG" alt="Portrait of Arif" class="headshot" />
+    <h1 class="headline">Mentor, consultant, musician, and multi-hyphenate generalist</h1>
+    <p class="subhead">
+      I help people move forward — creatively, strategically, and collaboratively — by showing up with energy, clarity, and a bias for progress.
+    </p>
+    <p class="read-more"><a href="#" id="toggleBio">Read Full Bio</a></p>
+
+    <div id="fullBio" class="full-bio hidden">
+      <p>
+        My background spans sectors — from event production and infrastructure to consulting, property, construction, education, and entertainment.
+      </p>
     </div>
+  </header>
 
-    <button class="section-button" onclick="window.open('https://www.linkedin.com/in/yourprofile', '_blank')">LinkedIn</button>
+  <main class="sections">
+    <section>
+      <h2>LinkedIn</h2>
+      <a class="button" href="https://www.linkedin.com/in/YOURPROFILE" target="_blank">View Profile</a>
+    </section>
 
-    <button class="section-button" onclick="togglePopup('creative')">Creative Stuff</button>
-    <div id="creative" class="popup">
-      <div class="split-links">
-        <a href="https://crossfader.fm" target="_blank">Crossfader</a>
-        <a href="https://substack.com" target="_blank">Substack</a>
+    <section>
+      <h2>Creative Stuff</h2>
+      <div class="button-group">
+        <a class="button" href="https://open.spotify.com/user/YOURNAME" target="_blank">Spotify</a>
+        <a class="button" href="https://YOUR.substack.com" target="_blank">Substack</a>
       </div>
     </section>
 
@@ -135,7 +144,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 KEni smells</p>
+    <p>&copy; 2025 Alittlebitofarif</p>
   </footer>
 
   <script>
